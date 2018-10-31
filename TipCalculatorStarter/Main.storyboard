@@ -23,13 +23,40 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="105"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CN5-Cg-0fZ">
+                                <rect key="frame" x="15" y="129" width="345" height="203"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5q9-z9-SaP">
+                                <rect key="frame" x="15" y="356" width="345" height="203"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AgB-fM-IBa">
+                                <rect key="frame" x="15" y="583" width="345" height="60"/>
+                                <color key="backgroundColor" name="tcDarkBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="TIX-hs-BXw"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" name="tcOffWhite"/>
                         <constraints>
+                            <constraint firstItem="AgB-fM-IBa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="BLl-pR-7R5"/>
+                            <constraint firstItem="5q9-z9-SaP" firstAttribute="height" secondItem="CN5-Cg-0fZ" secondAttribute="height" id="EbH-dD-llE"/>
+                            <constraint firstItem="5q9-z9-SaP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="FI7-mp-GUe"/>
                             <constraint firstItem="uae-ci-apE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KcG-RB-M9c"/>
+                            <constraint firstItem="CN5-Cg-0fZ" firstAttribute="top" secondItem="uae-ci-apE" secondAttribute="bottom" constant="24" id="LvQ-Z9-pLQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="uae-ci-apE" secondAttribute="bottom" constant="-85" id="N7j-aN-5ff"/>
+                            <constraint firstAttribute="bottom" secondItem="AgB-fM-IBa" secondAttribute="bottom" constant="24" id="Rub-Lp-IKD"/>
+                            <constraint firstItem="AgB-fM-IBa" firstAttribute="top" secondItem="5q9-z9-SaP" secondAttribute="bottom" constant="24" id="UoF-gj-Cd2"/>
+                            <constraint firstAttribute="trailing" secondItem="AgB-fM-IBa" secondAttribute="trailing" constant="15" id="V3V-Vp-DOg"/>
                             <constraint firstItem="uae-ci-apE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="YTq-8s-Ora"/>
-                            <constraint firstItem="uae-ci-apE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="q76-IU-dun"/>
+                            <constraint firstItem="5q9-z9-SaP" firstAttribute="top" secondItem="CN5-Cg-0fZ" secondAttribute="bottom" constant="24" id="c0A-ZA-2OM"/>
+                            <constraint firstAttribute="trailing" secondItem="5q9-z9-SaP" secondAttribute="trailing" constant="15" id="eQR-R6-EjQ"/>
+                            <constraint firstItem="CN5-Cg-0fZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="gn4-xz-YSO"/>
+                            <constraint firstItem="uae-ci-apE" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="q76-IU-dun"/>
+                            <constraint firstAttribute="trailing" secondItem="CN5-Cg-0fZ" secondAttribute="trailing" constant="15" id="v5b-Uy-zxF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -40,6 +67,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="tcDarkBlue">
+            <color red="0.16899999976158142" green="0.17599999904632568" blue="0.36100000143051147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="tcOffWhite">
             <color red="0.96899998188018799" green="0.96899998188018799" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
