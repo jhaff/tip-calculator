@@ -60,7 +60,7 @@
                                                         <color key="textColor" name="tcWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$0.00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GQW-w2-RIE">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$0.00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GQW-w2-RIE" customClass="BillAmountTextField" customModule="TipCalculatorStarter" customModuleProvider="target">
                                                         <rect key="frame" x="179" y="0.0" width="118" height="30"/>
                                                         <color key="tintColor" name="tcHotPink"/>
                                                         <constraints>
@@ -172,13 +172,17 @@
                                     <constraint firstItem="fkA-aU-83f" firstAttribute="leading" secondItem="5q9-z9-SaP" secondAttribute="leading" constant="22" id="q15-m5-q5Y"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AgB-fM-IBa">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AgB-fM-IBa">
                                 <rect key="frame" x="15" y="583" width="345" height="60"/>
                                 <color key="backgroundColor" name="tcDarkBlue"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="TIX-hs-BXw"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <state key="normal" title="RESET"/>
+                                <connections>
+                                    <action selector="resetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2ar-nB-sC1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" name="tcOffWhite"/>
@@ -207,6 +211,7 @@
                         <outlet property="headerView" destination="uae-ci-apE" id="iVa-Nu-fdH"/>
                         <outlet property="inputCardView" destination="CN5-Cg-0fZ" id="nlK-vB-AG3"/>
                         <outlet property="outputCardView" destination="5q9-z9-SaP" id="xKI-pE-DtU"/>
+                        <outlet property="resetButton" destination="AgB-fM-IBa" id="mT6-eg-T67"/>
                         <outlet property="themeSwitch" destination="Rtu-4Y-YFI" id="O9f-e4-jLX"/>
                         <outlet property="tipAmountLabel" destination="zP8-Ev-gUI" id="NSt-Kj-Jih"/>
                         <outlet property="tipAmountTitleLabel" destination="da4-yN-bwp" id="G3Q-2w-xr3"/>
