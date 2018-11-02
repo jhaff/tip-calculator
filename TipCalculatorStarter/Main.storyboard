@@ -150,7 +150,7 @@
                                                         <color key="textColor" name="tcCharcoal"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1c-hq-0t0">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1c-hq-0t0">
                                                         <rect key="frame" x="118" y="0.0" width="183" height="24"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                                         <color key="textColor" name="tcBlack"/>
@@ -206,9 +206,14 @@
                         <outlet property="billAmountTextField" destination="GQW-w2-RIE" id="Avn-B1-MKo"/>
                         <outlet property="headerView" destination="uae-ci-apE" id="iVa-Nu-fdH"/>
                         <outlet property="inputCardView" destination="CN5-Cg-0fZ" id="nlK-vB-AG3"/>
+                        <outlet property="outputCardView" destination="5q9-z9-SaP" id="xKI-pE-DtU"/>
                         <outlet property="themeSwitch" destination="Rtu-4Y-YFI" id="O9f-e4-jLX"/>
+                        <outlet property="tipAmountLabel" destination="zP8-Ev-gUI" id="NSt-Kj-Jih"/>
+                        <outlet property="tipAmountTitleLabel" destination="da4-yN-bwp" id="G3Q-2w-xr3"/>
                         <outlet property="tipPercentSegmentedControl" destination="UnI-Ol-T8c" id="5lI-wp-xUW"/>
                         <outlet property="titleLabel" destination="Su7-Po-ADo" id="KeE-sd-PzY"/>
+                        <outlet property="totalLabel" destination="D1c-hq-0t0" id="pOh-Ae-FlT"/>
+                        <outlet property="totalTitleLabel" destination="O2m-Oi-An5" id="5f8-Zq-SIp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
