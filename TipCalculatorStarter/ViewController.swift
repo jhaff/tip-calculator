@@ -49,6 +49,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         billAmountTextField.calculateButtonAction = {
+            if self.billAmountTextField.isFirstResponder {
+                self.billAmountTextField.resignFirstResponder()
+            }
             // 1
             guard let billAmountText = self.billAmountTextField.text,
                 let billAmount = Double(billAmountText) else {
@@ -68,6 +71,11 @@ class ViewController: UIViewController {
             print("Bill Amount: \(roundedBillAmount)")
             print("Tip Amount: \(roundedTipAmount)")
             print("Total Amount: \(totalAmount)")
+            
+            // Update UI
+            self.billAmountTextField.text = String(format: "%.2f", roundedBillAmount)
+            self.tipAmountLabel.text = String(format: "%.2f", roundedTipAmount)
+            self.totalLabel.text = String(format: "%.2f", totalAmount)
         }
     }
     
