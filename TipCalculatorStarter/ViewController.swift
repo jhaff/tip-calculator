@@ -29,10 +29,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var resetButton: UIButton!
     
-    @IBAction func resetButtonTapped(_ sender: UIButton) {
-        print("reset button tapped")
-
-    }
+    
     @IBAction func tipPercentChanged(_ sender: UISegmentedControl) {
         
         
@@ -43,6 +40,12 @@ class ViewController: UIViewController {
         
     }
     
+    func clear() {
+        billAmountTextField.text = nil
+        tipPercentSegmentedControl.selectedSegmentIndex = 0
+        tipAmountLabel.text = "$0.00"
+        totalLabel.text = "$0.00"
+    }
     
     func calculate() {
         // dismiss keyboard
@@ -52,6 +55,7 @@ class ViewController: UIViewController {
         
         guard let billAmountText = self.billAmountTextField.text,
             let billAmount = Double(billAmountText) else {
+                clear()
                 return
         }
         
@@ -80,6 +84,10 @@ class ViewController: UIViewController {
         self.totalLabel.text = String(format: "%.2f", totalAmount)
     }
     
+    @IBAction func resetButtonTapped(_ sender: UIButton) {
+        print("reset button tapped")
+        clear()
+    }
     
     // MARK: - View Lifecycle
 
