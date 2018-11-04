@@ -57,7 +57,18 @@ class ViewController: UIViewController {
         
         let roundedBillAmount = (100 * billAmount).rounded() / 100
         
-        let tipPercent = 0.15
+        let tipPercent: Double
+        switch tipPercentSegmentedControl.selectedSegmentIndex {
+        case 0:
+            tipPercent = 0.15
+        case 1:
+            tipPercent = 0.18
+        case 2:
+            tipPercent = 0.20
+        default:
+            preconditionFailure("Unexpected index.")
+        }
+        
         let tipAmount = roundedBillAmount * tipPercent
         let roundedTipAmount = (100 * tipAmount).rounded() / 100
         
