@@ -35,10 +35,16 @@ class ViewController: UIViewController {
         
     }
     @IBAction func themeToggled(_ sender: UISwitch) {
-        
-        
-        
+        setTheme(isDark: sender.isOn)
     }
+    
+    var isDefaultStatusBar = true
+    
+    // 2
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return isDefaultStatusBar ? .default : .lightContent
+    }
+
     
     func setupViews() {
         headerView.layer.shadowOffset = CGSize(width: 0, height: 1)
@@ -58,6 +64,35 @@ class ViewController: UIViewController {
         
         resetButton.layer.cornerRadius = 8
         resetButton.layer.masksToBounds = true
+    }
+    
+    func setTheme(isDark: Bool) {
+        let theme = isDark ? ColorTheme.dark : ColorTheme.light
+        
+        view.backgroundColor = theme.viewControllerBackgroundColor
+        
+        headerView.backgroundColor = theme.primaryColor
+        titleLabel.textColor = theme.primaryTextColor
+        
+        inputCardView.backgroundColor = theme.secondaryColor
+        
+        billAmountTextField.tintColor = theme.accentColor
+        tipPercentSegmentedControl.tintColor = theme.accentColor
+        
+        outputCardView.backgroundColor = theme.primaryColor
+        outputCardView.layer.borderColor = theme.accentColor.cgColor
+        
+        tipAmountTitleLabel.textColor = theme.primaryTextColor
+        totalTitleLabel.textColor = theme.primaryTextColor
+        
+        tipAmountLabel.textColor = theme.outputTextColor
+        totalLabel.textColor = theme.outputTextColor
+        
+        resetButton.backgroundColor = theme.secondaryColor
+        
+        isDefaultStatusBar = theme.isDefaultStatusBar
+        setNeedsStatusBarAppearanceUpdate()
+
     }
     
     func clear() {
@@ -114,6 +149,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setTheme(isDark: false)
         setupViews()
         
         billAmountTextField.calculateButtonAction = {
